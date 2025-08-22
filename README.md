@@ -3,7 +3,7 @@
 - docker compose exec app /bin/bash
 - composer i
 
-## Postman collection
+## Postman collection (нужно ввести корректный токен)
 - https://www.postman.com/bold-astronaut-7282/interview/request/lby6x39/getnumber?tab=params
 
 ## Proxy API urls
