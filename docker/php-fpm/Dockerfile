@@ -2,6 +2,9 @@ FROM php:8.2-fpm
 
 WORKDIR /var/www/html
 
+ARG UID=1000
+ARG GID=1000
+
 RUN apt-get update && apt-get install -y \
     nano \
     libzip-dev \
@@ -15,7 +18,10 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php \
     -- --install-dir=/usr/local/bin --filename=composer
 
+RUN usermod -u ${UID} www-data && groupmod -g ${GID} www-data
+
 RUN chown -R www-data:www-data /var/www/html
+
 USER www-data
 
 CMD ["php-fpm"]
