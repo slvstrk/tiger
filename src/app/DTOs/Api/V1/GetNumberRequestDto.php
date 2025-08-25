@@ -2,7 +2,7 @@
 
 namespace App\DTOs\Api\V1;
 
-class GetNumberRequestDto
+readonly class GetNumberRequestDto
 {
     public function __construct(
         public string $action,

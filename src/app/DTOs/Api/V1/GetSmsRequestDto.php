@@ -2,7 +2,7 @@
 
 namespace App\DTOs\Api\V1;
 
-class GetSmsRequestDto
+readonly class GetSmsRequestDto
 {
     public function __construct(
         public string $action,

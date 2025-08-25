@@ -2,7 +2,7 @@
 
 namespace App\DTOs\Api\V1;
 
-class CancelRequestDto
+readonly class CancelRequestDto
 {
     public function __construct(
         public string $action,
